@@ -1,0 +1,9 @@
+EX=`pwd`
+ARG=$*
+FIRSTARG=$1
+EXECU="${EX}/node_modules/.bin/${ARG}"
+echo -e "\e[94mNow running command:\e[0m"
+echo -e "\e[95m${FIRSTARG}\e[0m"
+echo -e "\e[96mIn directory:\e[0m"
+echo -e "\e[93m${EX}/node_modules/.bin\e[0m"
+$EXECU

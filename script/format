@@ -1,0 +1,1 @@
+run prettier --list-different --single-quote --print-width=120 webpack.config.js "js/**/*.{js,jsx}"

@@ -1,0 +1,107 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #999999;
+    color: black;
+    font-size: 14px;
+    /* Helvetica/Arial-based sans serif stack */
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Julee';
+    src: url('./Julee-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: cursive;
+}
+
+.flexbox-parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align items in Main Axis */
+    align-items: stretch;
+    /* align items in Cross Axis */
+    align-content: stretch;
+    /* Extra space in Cross Axis */
+    background: rgba(255, 255, 255, .1);
+}
+
+.flexbox-item {
+    padding: 8px;
+}
+
+.flexbox-item-grow {
+    flex: 1;
+    /* same as flex: 1 1 auto; */
+}
+
+.flexbox-item.header {
+    background: rgba(200, 91, 255, 1);
+    font-family: 'Julee';
+    font-size: 14px;
+}
+
+.flexbox-item.footer {
+    background: rgba(69, 255, 59, 1);
+    font-family: 'Julee';
+    font-size: 14px;
+}
+
+.flexbox-item.content {
+    background: rgba(52, 0, 255, 1);
+}
+
+.fill-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align items in Main Axis */
+    align-items: stretch;
+    /* align items in Cross Axis */
+    align-content: stretch;
+    /* Extra space in Cross Axis */
+}
+
+.fill-area-content {
+    background: rgba(200, 200, 80, 5);
+    border: 1px solid #000000;
+    /* Needed for when the area gets squished too far and there is content that can't be displayed */
+    overflow: auto;
+}
+
+.win-height,
+.win-width {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-color: red;
+    display: block;
+    text-align: center;
+}
+
+.canvas-height,
+.canvas-width {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-color: lightgreen;
+    display: block;
+    text-align: center;
+}
